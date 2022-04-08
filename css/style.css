@@ -1,3 +1,9 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* common */
 html {
     background-color: #b91450;
@@ -9,11 +15,16 @@ h1 {
     font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;  
+    margin: 1.5rem auto;  
 }
 
 h3 {
+    margin: 1rem auto;
     text-transform: uppercase;
+}
+
+h4 {
+    margin-bottom: 2.5rem;
 }
 
 /* dati inseriti */
@@ -68,15 +79,19 @@ button {
 
 .ticket-item {
     display: inline-block;
-    margin: 0 2.2rem;
+    margin: 0 1.5rem;
 }
 
 .name {
     background-color: #808080;
-    padding: 0.4rem;
     font-weight: bold;
+    margin: 0;
+    padding: 0.4rem;
 }
 
+.name h3 {
+    margin-bottom: 2.5rem;
+}
 
 .d-none {
     display: none;

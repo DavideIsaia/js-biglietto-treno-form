@@ -18,7 +18,11 @@ formBtn.addEventListener("click",
         let price = kmNumber * 0.21;
         console.log(price, typeof (price));
 
-        // calcolo la tariffa
+        // alert di errore se non inserisco il numero di km 
+        if (isNaN (kmNumber)) {
+            alert("Dati non inseriti correttamente");
+        // altrimenti calcolo la tariffa
+        } else {
         let discount;
         let fare = (document.getElementById("age-select").value);
 
@@ -63,6 +67,7 @@ formBtn.addEventListener("click",
         const resultContainer = document.querySelector(".result");
         console.log(resultContainer);
         resultContainer.classList.remove("d-none");
+        }
     }
 );
 
