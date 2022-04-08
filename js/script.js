@@ -39,23 +39,23 @@ formBtn.addEventListener("click",
         console.log(ticketPrice);
 
         // compilo il biglietto
-        const ticketName = document.querySelector(".result .name");
-        ticketName.innerHTML = `Nome Passeggero ${userName}`;
+        const ticketName = document.querySelector(".result .name div");
+        ticketName.innerHTML = `${userName}`;
         console.log(ticketName);
 
-        const ageFare = document.querySelector(".result .age");
+        const ageFare = document.querySelector(".result .age div");
         ageFare.innerHTML = `Biglietto ${ageSelect}`;
         console.log(ageFare);
 
-        const wagonNumber = document.querySelector(".result .wagon");
+        const wagonNumber = document.querySelector(".result .wagon div");
         wagonNumber.innerHTML = Math.floor(Math.random() * 10) + 1;
         console.log(wagonNumber);
 
-        const codCP = document.querySelector(".result .cod-cp");
+        const codCP = document.querySelector(".result .cod-cp div");
         codCP.innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1) ) + 90000;
         console.log(codCP);
         
-        const totalPrice = document.querySelector(".result .price");
+        const totalPrice = document.querySelector(".result .price div");
         totalPrice.innerHTML = `${ticketPrice} €`;
         console.log(totalPrice);
 

@@ -1,3 +1,4 @@
+/* common */
 html {
     background-color: #b91450;
     font-family: Arial, Helvetica, sans-serif;
@@ -5,12 +6,17 @@ html {
 
 h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 1.5rem;  
 }
 
+h3 {
+    text-transform: uppercase;
+}
+
+/* dati inseriti */
 .container {
     max-width: max-content;
     color: #b91450;
@@ -46,14 +52,31 @@ button {
     font-size: 1rem;
 }
 
+/* biglietto */
 .result {
-    max-width: 1200px;
-    min-width: 600px;
+    max-width: max-content;
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
     padding: 2rem;
 }
+
+.ticket-container {
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+}
+
+.ticket-item {
+    display: inline-block;
+    margin: 0 2.2rem;
+}
+
+.name {
+    background-color: #808080;
+    padding: 0.4rem;
+    font-weight: bold;
+}
+
 
 .d-none {
     display: none;
