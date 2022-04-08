@@ -29,18 +29,23 @@
 
             <!-- fascia d'età -->
             <div class="form-item">
-                <label for="age-fare">Fascia d'età</label>
-                <select name="age-fare" id="age-fare">
+                <label for="age-select">Fascia d'età</label>
+                <select name="age-select" id="age-select">
                     <option value=""></option>
-                    <option value="under18">Minorenne</option>
-                    <option value="normal-fare">Maggiorenne</option>
-                    <option value="over65">Over 65</option>
+                    <option value="Under-18">Minorenne</option>
+                    <option value="Standard">Maggiorenne</option>
+                    <option value="Over-65">Over 65</option>
                 </select>
             </div>
 
             <!-- bottoni -->
             <button id="form-btn">Genera</button>
             <button id="form-clear-btn">Annulla</button>
+        </div>
+
+        <div class="result d-none">
+            <h2></h2>
+            <p>Il tuo colore prederito</p>
         </div>
     </main>
 
