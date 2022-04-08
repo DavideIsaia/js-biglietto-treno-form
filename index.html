@@ -14,14 +14,41 @@
     </header>
 
     <main>
-        <div id="ticket-price"></div>
+        <div class="container">
+            <!-- nome e cognome -->
+            <div class="form-item">
+                <label for="user-name">Nome e Cognome</label>
+                <input type="text" name="user-name" id="user-name">
+            </div>
+
+            <!-- km da percorrere -->
+            <div class="form-item">
+                <label for="km-number">Km da percorrere</label>
+                <input type="number" name="km-number" id="km-number">
+            </div>
+
+            <!-- fascia d'età -->
+            <div class="form-item">
+                <label for="age-fare">Fascia d'età</label>
+                <select name="age-fare" id="age-fare">
+                    <option value=""></option>
+                    <option value="under18">Minorenne</option>
+                    <option value="normal-fare">Maggiorenne</option>
+                    <option value="over65">Over 65</option>
+                </select>
+            </div>
+
+            <!-- bottoni -->
+            <button id="form-btn">Genera</button>
+            <button id="form-clear-btn">Annulla</button>
+        </div>
     </main>
 
     <footer>
         <h4>Ferrovie Booleane</h4>
     </footer>
-
+    
     <!-- scripts -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

@@ -5,26 +5,26 @@ html {
 
 h1 {
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 30vh;    
+    text-transform: uppercase;
+    margin-bottom: 15vh;    
 }
 
-#ticket-price {
-    width: max-content;
+.container {
+    max-width: 1200px;
+    min-width: 600px;
     margin: 0 auto;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    background-color: rgb(255, 193, 47);
-    padding: 1rem;
-    border-radius: 2.5rem;
-    transition: 1s;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
 }
 
-#ticket-price:hover {
-    transform: scale(1.2);
+.form-item {
+    display: inline-block;
+    margin: 0 1rem;
 }
+
 
 footer {
     position: fixed;
