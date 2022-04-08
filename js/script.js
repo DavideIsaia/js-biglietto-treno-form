@@ -6,13 +6,36 @@ formBtn.addEventListener("click",
     function() {
         // assegno a delle variabili js i valori inseriti dall'utente nel form
         const userName = document.getElementById("user-name").value;
-        console.log(userName);
+        console.log(userName, typeof (userName));
 
-        const kmNumber = document.getElementById("km-number").value;
+        const kmNumber = parseInt (document.getElementById("km-number").value);
         console.log(kmNumber, typeof (kmNumber));
 
         const ageSelect = document.getElementById("age-select").value;
         console.log(ageSelect, typeof (ageSelect));
+
+        // moltiplico i km inseriti per 0.21
+        let price = kmNumber * 0.21;
+        console.log(price, typeof (price));
+
+        // calcolo la tariffa
+        let discount;
+        let fare;
+
+        if (ageSelect) {          
+            discount = 0;
+        } else if (ageSelect) {           
+            discount = (price * 20) / 100;
+        } else if (ageSelect) {
+            discount = (price * 40) / 100;
+        }
+        // sottraggo lo sconto, se presente, dal prezzo pieno
+        let ticketPrice = price - discount;
+        console.log(ticketPrice, typeof (ticketPrice));
+
+        // tolgo i decimali superflui dal risultato
+        const ticketPriceEuro = ticketPrice.toFixed(2);
+        console.log(ticketPriceEuro);
 
         // compilo il biglietto
         const ticketName = document.querySelector(".result h2");
@@ -22,6 +45,10 @@ formBtn.addEventListener("click",
         const ageFare = document.querySelector(".result p");
         ageFare.innerHTML = `Biglietto ${ageSelect}`;
         console.log(ageFare);
+        
+        const totalPrice = document.querySelector(".result span");
+        totalPrice.innerHTML = `${ticketPriceEuro} €`;
+        console.log(totalPrice);
 
         // visualizzo nella pagina il biglietto
         const resultContainer = document.querySelector(".result");
@@ -30,30 +57,4 @@ formBtn.addEventListener("click",
     }
 );
 
-// let discount;
-// let fare;
-
-// if (ageNumber >= 18 && ageNumber <= 65) {
-//     // console.log(string = "tariffa normale");
-//     fare = (string = "tariffa normale");
-//     discount = 0;
-// } else if (ageNumber < 18) {
-//     // console.log(string = "minorenne");
-//     fare = (string = "tariffa minorenni");
-//     discount = (price * 20) / 100;
-// } else if (ageNumber > 65) {
-//     // console.log(string = "senior");
-//     fare = (string = "tariffa anziani");
-//     discount = (price * 40) / 100;
-// }
-// // sottraggo lo sconto, se presente, dal prezzo pieno
-// let ticketPrice = price - discount;
-// console.log(ticketPrice, typeof (ticketPrice));
-
-// // tolgo i decimali superflui dal risultato
-// const ticketPriceEuro = ticketPrice.toFixed(2);
-// console.log(ticketPriceEuro);
-
-// // mostro il risultato del prezzo nell'html
-// const message = `Il prezzo del biglietto per ${kmNumber}Km con ${fare} è di: ${ticketPriceEuro} €`;
-// document.getElementById('ticket-price').innerHTML = message;
+// = `${ticketPriceEuro} €`;
