@@ -57,4 +57,23 @@ formBtn.addEventListener("click",
     }
 );
 
-// = `${ticketPriceEuro} €`;
+const formClearBtn = document.getElementById("form-clear-btn");
+console.log(formClearBtn);
+
+formClearBtn.addEventListener("click", 
+    function() {
+        
+        // nascondo il risultato
+        const resultContainer = document.querySelector(".result");
+        resultContainer.classList.add("d-none");
+
+        // svuoto il form
+        const userName = document.getElementById("user-name");
+        userName.value = "";
+
+        const kmNumber = document.getElementById("km-number");
+        kmNumber.value = "";
+        const ageSelect = document.getElementById("age-select");
+        ageSelect.value = "";
+    }
+);
