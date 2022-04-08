@@ -20,22 +20,23 @@ formBtn.addEventListener("click",
 
         // calcolo la tariffa
         let discount;
-        let fare;
+        let fare = (document.getElementById("age-select").value);
 
-        if (ageSelect) {          
+        if (fare === "Standard") {          
             discount = 0;
-        } else if (ageSelect) {           
-            discount = (price * 20) / 100;
-        } else if (ageSelect) {
-            discount = (price * 40) / 100;
+        } else if (fare === "Under-18") {           
+            discount = price * 0.2;
+        } else if (fare === "Over-65") {
+            discount = price * 0.4;
         }
+
         // sottraggo lo sconto, se presente, dal prezzo pieno
-        let ticketPrice = price - discount;
-        console.log(ticketPrice, typeof (ticketPrice));
+        price = price - discount;
+        console.log(price);
 
         // tolgo i decimali superflui dal risultato
-        const ticketPriceEuro = ticketPrice.toFixed(2);
-        console.log(ticketPriceEuro);
+        const ticketPrice = price.toFixed(2);
+        console.log(ticketPrice);
 
         // compilo il biglietto
         const ticketName = document.querySelector(".result h2");
@@ -47,7 +48,7 @@ formBtn.addEventListener("click",
         console.log(ageFare);
         
         const totalPrice = document.querySelector(".result span");
-        totalPrice.innerHTML = `${ticketPriceEuro} €`;
+        totalPrice.innerHTML = `${ticketPrice} €`;
         console.log(totalPrice);
 
         // visualizzo nella pagina il biglietto

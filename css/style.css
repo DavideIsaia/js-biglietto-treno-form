@@ -18,11 +18,21 @@ h1 {
     background-color: white;
     border-radius: 10px;
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .form-item {
     display: inline-block;
     margin: 0 1rem;
+}
+
+.result {
+    max-width: 1200px;
+    min-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
 }
 
 .d-none {
