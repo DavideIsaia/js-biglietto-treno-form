@@ -8,22 +8,42 @@ h1 {
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 15vh;    
+    margin-bottom: 1.5rem;  
 }
 
 .container {
-    max-width: 1200px;
-    min-width: 600px;
+    max-width: max-content;
+    color: #b91450;
+    font-weight: bold;
+    text-align: center;
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.2);
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .form-item {
     display: inline-block;
     margin: 0 1rem;
+}
+
+input, select {
+    display: block;
+    border: 1px solid #b91450;
+    border-radius: 3px;
+    padding: 0.4rem;
+    font-size: 1rem;
+    font-weight: inherit;
+    margin: 1rem 0;
+}
+
+button {
+    color: inherit;
+    font-weight: inherit;
+    padding: 0.4rem;
+    font-size: 1rem;
 }
 
 .result {
