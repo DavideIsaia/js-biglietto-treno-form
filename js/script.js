@@ -18,8 +18,8 @@ formBtn.addEventListener("click",
         let price = kmNumber * 0.21;
         console.log(price, typeof (price));
 
-        // alert di errore se non inserisco il numero di km 
-        if (isNaN (kmNumber)) {
+        // alert di errore se non inserisco nome o numero di km o fascia di età
+        if (document.getElementById("user-name").value === "" || isNaN (kmNumber) || document.getElementById("age-select").value === "") {
             alert("Dati non inseriti correttamente");
         // altrimenti calcolo la tariffa
         } else {
@@ -48,7 +48,7 @@ formBtn.addEventListener("click",
         console.log(ticketName);
 
         const ageFare = document.querySelector(".result .age div");
-        ageFare.innerHTML = `Biglietto ${ageSelect}`;
+        ageFare.innerHTML = `Tariffa ${ageSelect}`;
         console.log(ageFare);
 
         const wagonNumber = document.querySelector(".result .wagon div");
@@ -71,6 +71,7 @@ formBtn.addEventListener("click",
     }
 );
 
+// creo un bottone che riporta la pagina al punto di partenza
 const formClearBtn = document.getElementById("form-clear-btn");
 console.log(formClearBtn);
 
@@ -87,6 +88,7 @@ formClearBtn.addEventListener("click",
 
         const kmNumber = document.getElementById("km-number");
         kmNumber.value = "";
+
         const ageSelect = document.getElementById("age-select");
         ageSelect.value = "";
     }
